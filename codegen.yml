@@ -1,0 +1,22 @@
+overwrite: true
+schema: "http://localhost:3007"
+documents: "src/graphql/**/*.gql"
+config:
+  typesPrefix: I
+  declarationKind: 'interface'
+  # to make it .d.ts and avoid js compilation
+  # noExport: true
+  # enumsAsTypes: true
+  # redefine rating to make it valid TS
+
+generates:
+  src/graphql/types.ts:
+    - typescript
+  src/graphql/:
+    preset: near-operation-file
+    presetConfig:
+      extension: .tsx
+      baseTypesPath: types.ts
+    plugins:
+      - typescript-operations
+      - typescript-react-apollo

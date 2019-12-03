@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "Keystone H&F",
+    "description": "Keystone Health & Fitness - Member App",
+    "version": "2.12.9",
+    "sdkVersion": "35.0.0",
+    "slug": "keystone-app",
+    "icon": "./assets/icon@1024.png",
+    "orientation": "portrait",
+    "primaryColor": "#00315E",
+    "notification": {
+      "icon": "https://s3-ap-southeast-2.amazonaws.com/keystone-static-assets/ks_icon_block-coal-gs_48x48.png",
+      "color": "#00315E"
+    },
+    "ios": {
+      "bundleIdentifier": "fit.keystone.app",
+      "buildNumber": "2.12.9",
+      "icon": "./assets/icon@1024.png",
+      "supportsTablet": false,
+      "splash": {
+        "image": "./assets/splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#00315E"
+      },
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow Keystone H&F to use your camera. It is required to: take profile and progress pictures, use barcode scanner.",
+        "NSPhotoLibraryUsageDescription": "Give Keystone H&F permission to access your photos. It is required to select profile and progress pictures.",
+        "NSMotionUsageDescription": "Allow Keystone H&F to access your device's accelerometer. It is required to display your steps."
+      }
+    },
+    "android": {
+      "package": "fit.keysone.app",
+      "versionCode": 429,
+      "icon": "./assets/icon@1024.png",
+      "splash": {
+        "mdpi": "./assets/splash-mdpi.png",
+        "hdpi": "./assets/splash-hdpi.png",
+        "xhdpi": "./assets/splash-xhdpi.png",
+        "xxhdpi": "./assets/splash-xxhdpi.png",
+        "xxxhdpi": "./assets/splash-xxxhdpi.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#00315E"
+      },
+      "googleServicesFile": "./google-services.json",
+      "permissions": [
+        "CAMERA",
+        "VIBRATE",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "com.majeur.launcher.permission.UPDATE_BADGE",
+        "com.sec.android.provider.badge.permission.READ",
+        "com.sec.android.provider.badge.permission.WRITE"
+      ]
+    },
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#00315E"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "hooks": {
+    },
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}

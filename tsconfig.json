@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-native",
+    "lib": [ "es6" ],
+    "baseUrl": ".",
+    "paths": {
+      "lib/*": ["./lib/*"],
+      "assets/*": ["./assets/*"],
+      "keystone": ["./lib/keystone"],
+      "keystone/*": ["./lib/keystone/*"],
+      "*": ["./src/*"]
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types",
+    ],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "target": "esnext",
+    "noUnusedLocals": true,                /* Report errors on unused locals. */
+    "noUnusedParameters": true,            /* Report errors on unused parameters. */
+    "noImplicitReturns": true,             /* Report error when not all code paths in function return a value. */
+  },
+  "exclude": [
+    "node_modules",
+    "types"
+  ]
+}

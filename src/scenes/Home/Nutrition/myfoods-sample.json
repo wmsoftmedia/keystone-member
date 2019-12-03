@@ -1,0 +1,66 @@
+//Schema of myfoods that matches macros
+{
+    cals: Number | null, //Calculated cals from the selected servings
+    type: "food",
+    label: String 
+    macros: { //Calculated macros from the selected servings
+      protein: Number | null,
+      fat: Number | null,
+      carbs: Number | null,
+    },
+    measure: String,
+    meta: {
+        source: "myfood"
+    },
+    servings: [
+      {
+         description: String, //matches .servingUnit "100 g"
+         calories: Number | null, //calories for that specific serving
+         protein: Number | null,
+         fat: Number | null,
+         carbs: Number | null,
+         unit: String // e.g "g"
+         fibre: Number | null,
+         alcohol: Number | null,
+      }
+    ],
+    servingAmount: Number, //"2"
+    servingUnit: String, // "100 g"
+    unit: String // "g"
+    numberOfUnits: Number, // numberOfUnits + units = servingUnit
+}
+
+//Example payload
+const sample = {
+  cals: 254, // servings[0].calories * servingAmount
+  label: "My own chicken",
+  type: "food",
+  macros: {
+    protein: 50, //servings[0].protein * servingAmount
+    fat: 6, //servings[0].protein * servingAmount
+    carbs: 0 //serving[0].carbs * servingAmount
+  },
+  measure: "serving",
+  meta: {
+    source: "myfood",
+    id: "8f9d7dcf-0a28-453c-bd92-1cf9d382405a"
+  },
+  servings: [
+    {
+      description: "serving",
+      calories: 127,
+      protein: 25,
+      fat: 3,
+      carbs: 0,
+      fibre: null,
+      alcohol: null,
+      unit: "serving",
+      amount: 1
+    }
+  ],
+  amount: 1,
+  servingAmount: 2,
+  servingUnit: "serving",
+  unit: "serving",
+  numberOfUnits: 1
+}

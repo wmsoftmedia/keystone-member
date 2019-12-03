@@ -1,0 +1,3 @@
+export const TIMER_UPDATE = "TIMER_UPDATE"
+export const TIMER_RESET = "TIMER_RESET"
+export const TIMER_UPDATE_ALL = "TIMER_UPDATE_ALL"
